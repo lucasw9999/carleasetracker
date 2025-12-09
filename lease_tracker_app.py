@@ -31,9 +31,13 @@ def main():
     if st.sidebar.button("Calculate", type="primary"):
         calculate_and_display(lease_start, duration_years, annual_miles, current_miles, extra_price)
 
-    # Author information at bottom of sidebar
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("**Author:** Lucas Wu")
+    # Stylish author information at bottom of sidebar
+    st.sidebar.markdown(
+        '<div style="text-align: right; color: #555; font-size: 0.75em; margin-top: 25px; font-style: italic; border-top: 1px solid #ddd; padding-top: 8px;">'
+        '✨ crafted by Lucas Wu'
+        '</div>',
+        unsafe_allow_html=True
+    )
     
     # Show initial message if no calculation yet
     if 'calculated' not in st.session_state:
