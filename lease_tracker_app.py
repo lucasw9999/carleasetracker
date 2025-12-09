@@ -30,6 +30,10 @@ def main():
     # Calculate button
     if st.sidebar.button("Calculate", type="primary"):
         calculate_and_display(lease_start, duration_years, annual_miles, current_miles, extra_price)
+
+    # Author information at bottom of sidebar
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("**Author:** Lucas Wu")
     
     # Show initial message if no calculation yet
     if 'calculated' not in st.session_state:
